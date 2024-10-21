@@ -1,0 +1,166 @@
+{
+	"info": {
+		"_postman_id": "ba745845-1662-42ad-af88-f24882e510c5",
+		"name": "Cictema",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14183248"
+	},
+	"item": [
+		{
+			"name": "get personas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/personas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear persona",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\":\"Enzo\",\r\n    \"apellidos\":\"Esquivel Gonzalez\",\r\n    \"telefono\":\"0981774455\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/personas",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put persona",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\":\"Enzo\",\r\n    \"apellidos\":\"Gonzalez\",\r\n    \"telefono\":\"0976455121\",\r\n    \"deleted\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/personas/5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"personas",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\":\"Pirula\",\r\n    \"apellidos\":\"Alderete\",\r\n    \"telefono\":\"558432\",\r\n    \"email\": \"pirus@gmail.com\",\r\n    \"username\": \"pi.rula\",\r\n    \"password\": \"flacucha\",\r\n    \"porcentajeGanancia\": 0.1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get usuarios",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/usuarios?fechaCreacionDesde=20-10-2024&porcentajeGanancia=0.1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios"
+					],
+					"query": [
+						{
+							"key": "fechaCreacionDesde",
+							"value": "20-10-2024"
+						},
+						{
+							"key": "porcentajeGanancia",
+							"value": "0.1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "put usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\":\"Pesoca\",\r\n    \"apellidos\":\"Pesokin\",\r\n    \"telefono\":\"4450214\",\r\n    \"email\": \"pesoka@gmail.com\",\r\n    \"username\": \"pe.soka\",\r\n    \"password\": \"musculosoo\",\r\n    \"porcentajeGanancia\": 0.1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/usuarios/2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"usuarios",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
